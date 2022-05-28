@@ -28,5 +28,5 @@ While there are a few design similarities here and there to an older design, I b
 * Stealing and adapting different modules from past projects - need to make more organized and reusable, or just expect that this will be a nonissue if I had used a library.
 
 ## Related projects
-**Cafe website:** https://idyll-cafe.netlify.app/
+**Cafe website:** https://github.com/h-yung/website-cafe
 
