@@ -1,0 +1,877 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.wrapper {
+     display: flex;
+}
+
+/******************************************
+/* BASE STYLES
+
+poppins
+ital,wght@0,200;0,400;0,700;0,800;1,400;1,600
+
+display
+inconsolata - monospace
+300;400;500;700
+
+
+gen-
+LR 7rem
+
+/*******************************************/
+
+html {
+     scroll-behavior: smooth;
+}
+
+body {
+     background: black;
+     color: white;
+     font-family: 'Poppins', sans-serif;
+}
+body > * {
+     /* for invert */
+     transition: all 0.8s ease-in 0s;
+}
+
+body > section + section {
+     /* skipping the first containing header and main */
+     /* flex container */
+     flex-direction: column;
+     padding: 5rem 7rem;
+     width: 100%;
+     /* height: 90vh; */
+}
+
+body > section + section:active,
+body > section + section:hover {
+     border-left: 0.5rem solid hsl(187, 75%, 59%);
+}
+
+h2 { /*converting this to body > section + section > h2 and moving up however gets overridden*/
+     /* background: hsla(0, 0%, 100%, 0.279); */
+     font-weight: 300;
+     letter-spacing: 0.2em;
+     padding: 0.5em 0.5em 0.5em 0;
+}
+
+h1 {
+     font-size: 3rem;
+     font-weight: 200;
+     margin-bottom: 1em;
+}
+h2 {
+     font-size: 2rem;
+     margin-bottom: 1em;
+}
+
+p {
+     line-height: 2em;
+     margin-bottom: 1em;
+}
+
+a {
+     text-decoration: none;
+     color: hsl(187, 75%, 59%);
+     transform: all 0.5s ease-out 0s;
+}
+
+li {
+     font-weight: 300;
+}
+
+.cta,
+/*stuff in*/ .titles { /*links but more important than a. less important alone than w button*/
+     text-transform: uppercase;
+     letter-spacing: 0.2em;
+}
+
+.cta:hover {
+     cursor: pointer;
+}
+
+button {
+     display: block; /*own line*/
+}
+
+button.cta {
+     border-radius: 4rem;
+     padding: 0.5rem 2rem;
+     border: 2px solid hsl(0, 0%, 100%);
+     background: white;
+     transition: all 0.5s ease-out 0s;
+}
+button.cta:hover{
+     border: 2px solid hsl(187, 75%, 59%);
+     background: hsla(0, 0%, 100%, 0.279);
+     color: hsl(187, 75%, 59%);
+}
+
+input[type='radio'] {
+     position: fixed;
+     opacity: 0;
+     pointer-events: none;
+     padding: 0.5rem 1.2rem;
+}
+
+label {
+     padding: 0.2rem 1.2rem;
+     transition: all 0.2s ease-in 0s;
+}
+
+label:hover {
+     cursor: pointer;
+     padding: 0.2rem 1rem;
+     /* color:hsl(187, 75%, 59%); */
+     border-left: 0.2rem solid hsl(187, 75%, 59%);
+}
+
+input[type='radio']:checked + label {
+     font-weight:bold;
+     color:hsl(187, 75%, 59%);
+}
+
+.container {
+     /* inside a section, holds bunches of similar items more complex than typical list*/
+     width: 100%;
+     margin-top: 2rem;
+     /* flex container */
+     flex-wrap: wrap;
+}
+
+/* inside container */
+.work {
+     max-width: 50%;
+     width: 50%;
+     padding: 5%;
+}
+.work h3,
+#services h3 {
+     font-weight:300;
+     font-size: 1.2rem;
+     letter-spacing: 0.2em;
+     text-transform: uppercase;
+     margin: 1rem 0;
+}
+
+.work p {
+     line-height: 1.4em;
+     margin-bottom: 1.2em;
+}
+
+.work a:first-of-type{
+     display: block; /*have own line*/
+     margin-bottom: 0.65em;
+}
+.work a span,
+.work span {
+     font-family: 'Poppins', sans-serif;
+     font-weight: bold;
+}
+.work a:hover {
+     color: hsl(0, 0%, 100%);
+}
+
+.container .imgContainer {
+     /* outside of .container parents, can also work as standalone feature */
+     /* do not set "max-width" as img child element sizing won't work */
+     display: inline-block; /*enable height specs*/
+     width: 100%; 
+     height: 61%;
+     overflow: hidden;
+}
+
+.imgContainer img {
+     width: 100%;
+     object-fit: cover; 
+     object-position: top;
+}
+/* specific fix */
+img[alt="diversion bar mobile"]{
+     object-position: center;
+}
+
+
+/* mobile- */
+.overlay { /*for ref*/
+     visibility: hidden;
+     opacity: 0;
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%; /*cover entire screen*/
+     height: 100%;
+     transition: opacity .35s, visibility .35s, height .35s;
+     overflow: hidden;
+     background: black;
+     z-index: -1; /*put behind all*/
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* top level section */
+#top {
+     /* flex container */
+     /* height: 100vh; */
+     background: linear-gradient(hsla(0, 0%, 0%, 0.550),rgba(0, 0, 0, 0.550)), url("../images/AHUber-instructions_deliveryanim.gif") no-repeat;
+     background-size: 70%;
+     background-position: 100% center;
+}
+
+header {
+     order: 2;
+     width: 30%;
+}
+main {
+     order: 1;
+     /* height: 100vh; */
+     max-width: 70%;
+     width: 70%;
+     padding: 8rem 7rem;
+     transition: all 0.8s ease-in 0s; /*for invert*/
+}
+
+#feature,
+#contact,
+#services {
+     background: hsla(10, 50%, 70%, 0.15);
+}
+
+#feature h3 {
+     padding: 1em 0;
+}
+#feature h3::before {
+     margin-bottom: 1rem;
+     display: block;
+     content: "";
+     height: 2px;
+     width: 6rem;
+     background: white;
+     transition: all 0.8s ease-in 0s;
+}
+
+#feature.invert h3::before {
+     background: black;
+}
+
+/*********************/
+
+header nav.menu {
+     /* flex container */
+     font-size: 2em;
+     font-weight: 300;
+     /* font-family: 'Inconsolata', monospace; */
+     text-transform: uppercase;
+     height: 100%;
+     /* border: 1px solid white; */
+}
+
+nav.menu ul {
+     width: 100%;
+     /* flex container */
+     flex-direction: column;
+     justify-content: space-evenly;
+}
+
+nav.menu li {
+     width: 100%;
+     height: 100%;
+     padding: 4rem 2rem;
+     background: hsla(0, 0%, 100%, 0.279);
+     justify-self: center;
+     transform: all 0.5s ease-out 0s;
+}
+
+nav.menu li:hover{
+     background: none; 
+     border-left: 0.4rem solid hsl(187, 75%, 59%);
+}
+nav.menu li a:hover {
+     /* color:white; */
+     transform: all 0.5s ease-out 0s;
+}
+
+main p:first-of-type {
+     font-size: 1.5rem;
+     /* margin-left: 2rem; */
+}
+
+main .cta {
+     font-size: 0.7rem;
+}
+
+main button {
+     margin: 4em 0 2em 0;
+}
+
+#toggleMode {
+     margin: 2rem 2rem 0 0;
+}
+
+main a {
+     color: white;
+}
+
+main a:hover,
+main a:hover span {
+     color:hsl(187, 75%, 59%);
+}
+main a span {
+     font-family: 'Poppins', sans-serif;
+     margin-right: 1rem;
+}
+
+#toggleMode:hover {
+     color: hsl(187, 75%, 59%);
+}
+
+/* MY WORK ***********************************/
+
+#myWork input,
+#myWork label {
+     display: block;
+}
+
+/*note that .work.dev toggle is checked initially */
+.work.dev,
+.work.vis {
+     display: none;
+}
+/* toggle visible work */
+#showAll:checked ~ section .work.dev,
+#showAll:checked ~ section .work.vis {
+     display: initial;
+}
+#showDev:checked ~ section .work.dev {
+     display: initial;
+}
+#showDesign:checked ~ section .work.vis {
+     display: initial;
+}
+
+/* ABOUT ***********************************/
+
+#about{
+     /* flex container unlike the rest - flex direction is row */
+     flex-direction: row;
+}
+#about ul.social {
+     /* flex container */
+     width: 8rem;
+     font-size: 2rem;
+     justify-content: space-between;
+     margin-top: 1rem;
+}
+
+#about ul.social a {
+     transition: all 0.5s ease-in 0s;
+}
+#about ul.social a:hover {
+    color: white;
+}
+
+#about .content + .content {
+     /* flex container */
+     flex-direction: column;
+     align-items: center;
+     margin-left: 3rem;
+     font-size: 0.8rem;
+     line-height: 1rem;
+     text-align: center;
+}
+
+#about .content .content p{
+     width: 13rem;
+}
+
+#about .imgContainer {
+     /* margin: auto 5rem; */
+     height: 12rem;
+     min-width: 12rem;
+     margin: 2rem;
+     border-radius: 50%;
+     overflow: hidden;
+     transition: all 0.7s ease-out 0s;
+}
+
+#about .imgContainer:hover {
+     border:2px solid hsl(187, 75%, 59%);
+}
+
+#about .imgContainer img {
+     object-position: bottom;
+}
+
+/* SERVICES ***********************************/
+
+#services .content {
+     /* flex container */
+     justify-content: space-between;
+}
+
+#services .content section {
+     width: 45%;
+}
+
+#services .content h3 {
+     color: hsl(187, 75%, 59%);
+}
+
+#services .content p {
+     font-size: 1.1rem;
+}
+
+#services ul {
+     list-style-type:square;
+     padding-left: 1rem;
+     line-height: 1.5em;
+     /* border-left: 2px solid hsl(187, 75%, 59%); */
+}
+#services li {
+     margin-bottom: 1rem;
+     padding-left: 1rem;
+}
+
+#services button.cta {
+     margin: 2rem 0;
+}
+
+/* FOOTER ***********************************/
+footer {
+     padding: 2rem 7rem;
+     font-size: 0.7rem;
+     text-transform: uppercase;
+     letter-spacing: 0.2em;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+/* light mode */
+.invert {
+     background: hsl(40, 20%, 97%);
+     color: black;
+}
+
+#feature.invert,
+#contact.invert,
+#services.invert {
+     /* background: hsl(187, 20%, 80%); */
+     background: hsla(10, 30%, 90%, 1);
+}
+
+nav.menu li.invert {
+     /* since inversion is reversion */
+     background: black;
+}
+
+.invert button.cta {
+     background: hsl(187, 75%, 59%);
+     border:2px solid hsl(187, 75%, 59%);
+     color: black;
+}
+
+.invert button.cta:hover {
+     background: hsla(0, 0%, 100%, 0.279);
+     color: hsl(187, 75%, 59%);
+     font-weight: bold;
+}
+
+main.invert a {
+     color: black;
+}
+
+main.invert a:hover,
+main.invert a:hover span,
+main.invert #toggleMode:hover {
+     color:hsl(187, 75%, 59%);
+     font-weight: bold;
+}
+
+.invert .work a {
+     color: hsl(187, 75%, 59%);
+}
+.invert .work a:hover {
+     font-weight: bold;
+}
+
+#services.invert h3{
+     font-weight: bold;
+}
+
+/* conceal */
+.hide {
+     display: none;
+}
+
+/******************************************
+/* MEDIA QUERIES
+/*******************************************/
+@media screen and (max-width:1259px){
+     main {
+          padding-bottom: 5rem;
+          min-height: 0;
+     }
+     .work {
+          padding: 2%;
+     }
+     .work .imgContainer {
+          height:55%;
+     }
+}
+
+@media screen and (max-width:899px){
+
+     body > section + section {
+          padding: 4rem;
+     }
+
+     body > section + section:active,
+     body > section + section:hover {
+          border-left: none;
+          border-top: 0.5rem solid hsl(187, 75%, 59%);
+     }
+
+     #top {
+          flex-direction: column;
+     }
+     header {
+          order: 1;
+          width: 100%;
+          position: fixed;
+     }
+     
+     main {
+          order: 2;
+          max-width: none;
+          width: 100%;
+          /* flex container */
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+     }
+
+     main.invert .imgContainer.hide {
+          /* unhiding */
+          display: initial;
+          /* redundant w/ object fit below? */
+     }
+     main.invert .imgContainer img {
+          width:15rem;
+          height:15rem;
+          border-radius:50%;
+          /* object-fit works when the image itself needs a width and height */
+          object-fit: cover; 
+          object-position: right;
+     }
+
+     h1 {
+          margin: 2rem 0 1rem 0;
+          width: 100%;
+     }
+
+     header nav.menu {
+          font-size: 1rem;
+          width: 100%;
+     }
+
+     header nav.menu ul {
+          flex-direction: row;
+     }
+     nav.menu li {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          font-weight: bold;
+          line-height: 1.2em;
+          padding: 1.1rem;
+          /* background: rgba(0, 0, 0, 0.5); */
+     }
+     nav.menu li:hover{
+          background: black; 
+          border-left: none;
+          border-bottom: 0.2rem solid hsl(187, 75%, 59%);
+     }
+
+     /* .invert nav.menu li:hover {
+          background: white;
+          color:hsl(187, 75%, 59%);
+          font-weight: bold;
+     } */
+     
+     main h1,
+     main p {
+          text-align: center;
+     }
+
+     main .cta {
+          font-size: 0.9rem;
+     }
+     main a:last-of-type{
+          margin-top: 1rem;
+     }
+
+     button.cta {
+          font-size: 0.8rem;
+          padding: 1rem 2.5rem;
+     }
+
+     #myWork {
+          text-align: center;
+     }
+
+     #myWork label {
+          font-size: 1.2rem;
+          line-height: 1.5em;
+          padding:0.4rem 1rem;
+     }
+     label:hover {
+          cursor: pointer;
+          padding: 0.2rem 1rem;
+          border-left: none;
+          border-bottom: 0.1rem solid hsl(187, 75%, 59%);
+          background: hsla(0, 0%, 100%, 0.279);
+     }
+     .work {
+          max-width: 100%;
+          width: 100%;
+          height: 90%;
+          padding-bottom: 3rem;
+     }
+
+     #services {
+          align-items: center;
+     }
+
+     #services .content {
+          flex-direction: column;
+     }
+     #services .content section {
+          width: 100%;
+          margin-bottom: 2rem;
+     }
+     
+     #services h2,
+     #contact,
+     footer {
+          text-align: center;
+     }
+}
+
+@media screen and (max-width:789px){
+     #about {
+          flex-direction: column;
+          text-align: center;
+     }
+     #about content + content {
+          margin-left: 0;
+     }
+     #about .imgContainer {
+          min-width: none;
+          width: 12rem;
+     }
+}
+
+@media screen and (max-width:598px){
+     header nav.menu {
+          display: none;
+     }
+     
+     #burgerMenu {
+          z-index: 2; /*above subsequent elements*/
+          width: 2rem;
+          height: 2rem;
+          display: block;
+          border: none;
+          padding: 0;
+          position: fixed;
+          top: 1rem;
+          margin: 0 1rem;
+          background: linear-gradient(
+               to bottom, 
+               hsl(187, 75%, 59%), hsl(187, 75%, 59%) 20%, 
+               rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0) 40%, 
+               hsl(187, 75%, 59%) 40%, hsl(187, 75%, 59%) 60%, 
+               rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 80%, 
+               hsl(187, 75%, 59%) 80%, hsl(187, 75%, 59%) 100%
+          );
+     }
+
+
+     #burgerMenu:hover {
+          cursor: pointer;
+     }
+     
+     #burgerMenu > nav {
+          /* flex container */
+          z-index: 3; /*above*/
+          /* visibility: hidden; */
+          position: fixed;
+          opacity: 1;
+          top: -100vh;
+          left: 0;  /*width*/
+          width: 100%;
+          height: 100vh; 
+          background: hsl(187, 75%, 59%);
+          letter-spacing: 0.1em;
+          flex-direction: column;
+          transition: all 0.3s ease-in 0s;
+     }
+
+     #burgerMenu > nav > * {
+          line-height: 1.5rem;
+     }
+
+     #burgerMenu > nav a:first-child {
+          margin-top: 6rem;
+     }
+
+     #burgerMenu > nav a {
+          display:block;
+          padding: 2rem;
+          color: black;
+          text-align: center;
+          font-size: 1.2rem;
+          opacity: 1;
+     }
+
+     #burgerMenu > nav a:hover,
+     #burgerMenu > nav a:active {
+          opacity: 1;
+          color: white;
+          font-weight: bold;
+          background: black;
+     }
+
+     #burgerInput {
+          visibility: hidden;
+          position: absolute; /*otherwise weird header margins*/
+     }
+
+
+     #burgerInput:checked + #burgerMenu {
+          background: linear-gradient(
+               to bottom, 
+               white, white 20%, 
+               rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0) 40%, 
+               white 40%, white 60%, 
+               rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 80%, 
+               white 80%, white 100%
+          );
+     }
+
+     #burgerInput:checked + #burgerMenu > nav {
+          visibility:visible;
+          opacity: 1;
+          top: 0;
+          z-index: 1;
+     }
+
+     #top {
+          /* flex container */
+          /* height: 100vh; */
+          background: linear-gradient(hsla(0, 0%, 0%, 0.550),rgba(0, 0, 0, 0.550)), url("../images/AHUber-instructions_deliveryanim.gif") no-repeat;
+          background-size: 70%;
+          background-position: -30% 3%;
+          /* padding-top: 5rem; */
+          animation: 2s linear 0s infinite none running dinoRun;
+     }
+
+     @keyframes dinoRun {
+          0% {
+               background-position: -30% 3%;
+          }
+          100% {
+               background-position: 350% 3%;
+          }
+     }
+
+     main {
+          padding: 6rem 1rem 4rem 1rem;
+     }
+     main h1 {
+          font-size: 2.5rem;
+     }
+     main p{
+          line-height: 1.7rem;
+          margin: 1rem 2rem;
+     }
+     main p:first-of-type {
+          font-size: 1.3rem;
+     }
+     main button.cta {
+          line-height: 1.2rem;
+          font-size: 0.6rem;
+          padding: 0.8rem 1.5rem;
+     }
+
+     h2 {
+          font-size: 1.5rem;
+     }
+     #feature {
+          padding: 2rem 1rem;
+     }
+
+     #myWork,
+     #about {
+          padding: 4rem 1rem;
+     }
+
+     #myWork label {
+          font-size: 1rem;
+     }
+     .work > p {
+          padding: 0 1.5rem;
+     }
+     #services {
+          padding: 2rem;
+     }
+
+     #services h3 {
+          line-height: 1.5rem;
+     }
+     #services p {
+          line-height: 1.4rem;
+     }
+
+     #about p {
+          padding: 0 2rem;
+          font-size: 0.9rem;
+     }
+     #about .content + .content {
+          margin-left: 0;
+          margin-bottom: 3rem;
+     }
+
+     #contact {
+          padding: 3rem;
+     }
+     footer {
+          padding: 3rem;
+          font-size: 0.6rem;
+     }
+
+
+}
