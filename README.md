@@ -11,6 +11,7 @@ New responsive portfolio website (v.2), built from the ground up with as little 
 While there are a few design similarities here and there to an older design, I built this one from scratch to reduce CSS chaos. The breakpoints are somewhat unusual - more geared towards adjusting the design smoothly for different devices. This site is also a lot lighter in the sense of heaviest imagery removed from both the associated directories as well as replaced by lighter-weight versions.
 
 ## Special features
+* Light and dark modes (dark mode is default)
 * Animation at top of mobile view (dark mode)
 
 ## Optimizations
