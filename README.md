@@ -25,9 +25,10 @@ While there are a few design similarities here and there to an older design, I b
 * Some experimental effects (everything is very visual-focused) might not translate well for screen reader users - aiming to consider that more in future work as well.
 * Animated gif behind an overlay is probably not the best for accessibility...
 * Being concise is hard for me. Poor word : image ratio.
+* Stealing and adapting different modules from past projects - need to make more organized and reusable, or just expect that this will be a nonissue if I had used a library.
 
 Some question remains around why condensing the JavaScript files (e.g., moving what's in orders.js into main.js) can cause errors.
 
 ## Related projects
-**Memory Challenge:** https://github.com/h-yung/memory-challenge
+**Cafe website:** https://idyll-cafe.netlify.app/
 
