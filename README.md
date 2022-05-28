@@ -21,7 +21,7 @@ While there are a few design similarities here and there to an older design, I b
 * Build new form for contact submissions.
 
 ## Lessons learned
-* GIFs can become extremely memory- and time-expensive. At some point it would be better to just embed video.
+* GIFs can become extremely memory- and load-time-intensive. At some point it would be better to just embed video.
 * Some experimental effects (everything is very visual-focused) might not translate well for screen reader users - aiming to consider that more in future work as well.
 * Animated gif behind an overlay is probably not the best for accessibility...
 * Being concise is hard for me. Poor word : image ratio.
