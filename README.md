@@ -3,7 +3,7 @@ New responsive portfolio website (v.2), built from the ground up with as little 
 
 **Live**: https://hyung.netlify.app/
 
-![cafe website preview](https://i.postimg.cc/cCKwdqxm/idyll-screens.png)
+![portfolio website preview](https://i.postimg.cc/ht8XVzqW/portfolio-redux-desktop.png)
 
 ## How it's made
 **Tech used:** HTML, CSS, minimal JavaScript (temporary solution).
