@@ -803,6 +803,12 @@ main.invert #toggleMode:hover {
           0% {
                background-position: -30% 3%;
           }
+          43.75% { /*slow down*/
+               background-position: 190% 3%;
+          }
+          56.25% {
+               background-position: 285% 3%;
+          }
           100% {
                background-position: 350% 3%;
           }
