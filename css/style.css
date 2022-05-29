@@ -412,7 +412,7 @@ main a span {
 #about .imgContainer {
      /* margin: auto 5rem; */
      height: 12rem;
-     min-width: 12rem;
+     width: 12rem;
      margin: 2rem;
      border-radius: 50%;
      overflow: hidden;
