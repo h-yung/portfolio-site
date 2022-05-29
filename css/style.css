@@ -296,7 +296,7 @@ img[alt="idyll cafe"]{
      /* font-family: 'Inconsolata', monospace; */
      text-transform: uppercase;
      height: 100%;
-     background: hsla(0, 0%, 100%, 0.15);
+     
      /* border: 1px solid white; */
 }
 
@@ -310,6 +310,7 @@ img[alt="idyll cafe"]{
 nav.menu > a {
      width: 100%;
      height: 100%;
+     background: hsla(0, 0%, 100%, 0.15);
      padding: 4rem 2rem;
      justify-self: center;
      transform: all 0.5s ease-out 0s;
@@ -618,7 +619,7 @@ nav.menu a.invert {
           height: 4rem; /*max 2 lines before transitions to burger menu*/
           width: 100%;
           flex-direction: row;
-          background: rgba(0, 0, 0, 0.5); 
+          
      }
      nav.menu a {
           display: flex;
