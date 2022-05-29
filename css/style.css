@@ -51,17 +51,21 @@ body > * {
      transition: all 0.8s ease-in 0s;
 }
 
-body > section + section {
-     /* skipping the first containing header and main */
+main > *,
+aside {
+     /* skipping the first containing header and #intro */
      /* flex container */
      flex-direction: column;
      padding: 5rem 7rem;
      width: 100%;
+     transition: all 0.3s ease-in 0s;
      /* height: 90vh; */
 }
 
-body > section + section:active,
-body > section + section:hover {
+main > *:active,
+main > *:hover,
+aside:active,
+aside:hover {
      border-left: 0.5rem solid hsl(187, 75%, 59%);
 }
 
@@ -98,7 +102,7 @@ li {
 }
 
 .cta,
-/*stuff in*/ .titles { /*links but more important than a. less important alone than w button*/
+/*stuff in*/ header.titles { /*links but more important than a. less important alone than w button*/
      text-transform: uppercase;
      letter-spacing: 0.2em;
 }
@@ -243,11 +247,11 @@ img[alt="idyll cafe"]{
      background-position: 100% center;
 }
 
-header {
+#top header {
      order: 2;
      width: 30%;
 }
-main {
+#intro {
      order: 1;
      /* height: 100vh; */
      max-width: 70%;
@@ -259,13 +263,14 @@ main {
 #feature,
 #contact,
 #services {
-     background: hsla(10, 15%, 75%, 0.65);
+     background: hsla(10, 10%, 30%, 0.65);
 }
 
-#feature h3 {
+#feature h2 {
      padding: 1em 0;
+     font-size: 1rem;
 }
-#feature h3::before {
+#feature h2::before {
      margin-bottom: 1rem;
      display: block;
      content: "";
@@ -275,13 +280,13 @@ main {
      transition: all 0.8s ease-in 0s;
 }
 
-#feature.invert h3::before {
+#feature.invert h2::before {
      background: black;
 }
 
 /*********************/
 
-header nav.menu {
+#top header nav.menu {
      /* flex container */
      font-size: 2em;
      font-weight: 300;
@@ -302,7 +307,7 @@ nav.menu li {
      width: 100%;
      height: 100%;
      padding: 4rem 2rem;
-     background: hsla(0, 0%, 100%, 0.279);
+     background: hsla(0, 0%, 100%, 0.15);
      justify-self: center;
      transform: all 0.5s ease-out 0s;
 }
@@ -316,16 +321,16 @@ nav.menu li a:hover {
      transform: all 0.5s ease-out 0s;
 }
 
-main p:first-of-type {
+#intro p:first-of-type {
      font-size: 1.5rem;
      /* margin-left: 2rem; */
 }
 
-main .cta {
+#intro .cta {
      font-size: 0.7rem;
 }
 
-main button {
+#intro button {
      margin: 4em 0 2em 0;
 }
 
@@ -333,15 +338,15 @@ main button {
      margin: 2rem 2rem 0 0;
 }
 
-main a {
+#intro a {
      color: white;
 }
 
-main a:hover,
-main a:hover span {
+#intro a:hover,
+#intro a:hover span {
      color:hsl(187, 75%, 59%);
 }
-main a span {
+#intro a span {
      font-family: 'Poppins', sans-serif;
      margin-right: 1rem;
 }
@@ -440,6 +445,7 @@ main a span {
 
 #services .content h3 {
      color: hsl(187, 75%, 59%);
+     font-weight: bold;
 }
 
 #services .content p {
@@ -460,6 +466,11 @@ main a span {
 #services button.cta {
      margin: 2rem 0;
 }
+
+/* CONTACT ********************************/
+/* #contact p a {
+     font-weight: bold;
+} */
 
 /* FOOTER ***********************************/
 footer {
@@ -503,13 +514,13 @@ nav.menu li.invert {
      font-weight: bold;
 }
 
-main.invert a {
+#intro.invert a {
      color: black;
 }
 
-main.invert a:hover,
-main.invert a:hover span,
-main.invert #toggleMode:hover {
+#intro.invert a:hover,
+#intro.invert a:hover span,
+#intro.invert #toggleMode:hover {
      color:hsl(187, 75%, 59%);
      font-weight: bold;
 }
@@ -534,7 +545,7 @@ main.invert #toggleMode:hover {
 /* MEDIA QUERIES
 /*******************************************/
 @media screen and (max-width:1259px){
-     main {
+     #intro {
           padding-bottom: 5rem;
           min-height: 0;
      }
@@ -548,12 +559,15 @@ main.invert #toggleMode:hover {
 
 @media screen and (max-width:899px){
 
-     body > section + section {
+     main > *,
+     aside {
           padding: 4rem;
      }
 
-     body > section + section:active,
-     body > section + section:hover {
+     main > *:active,
+     main > *:hover,
+     aside:active,
+     aside:hover {
           border-left: none;
           border-top: 0.5rem solid hsl(187, 75%, 59%);
      }
@@ -561,13 +575,13 @@ main.invert #toggleMode:hover {
      #top {
           flex-direction: column;
      }
-     header {
+     #top header {
           order: 1;
           width: 100%;
           position: fixed;
      }
      
-     main {
+     #intro {
           order: 2;
           max-width: none;
           width: 100%;
@@ -577,12 +591,12 @@ main.invert #toggleMode:hover {
           align-items: center;
      }
 
-     main.invert .imgContainer.hide {
+     #intro.invert .imgContainer.hide {
           /* unhiding */
           display: initial;
           /* redundant w/ object fit below? */
      }
-     main.invert .imgContainer img {
+     #intro.invert .imgContainer img {
           width:15rem;
           height:15rem;
           border-radius:50%;
@@ -596,12 +610,12 @@ main.invert #toggleMode:hover {
           width: 100%;
      }
 
-     header nav.menu {
+     #top header nav.menu {
           font-size: 1rem;
           width: 100%;
      }
 
-     header nav.menu ul {
+     #top header nav.menu ul {
           flex-direction: row;
      }
      nav.menu li {
@@ -626,15 +640,15 @@ main.invert #toggleMode:hover {
           font-weight: bold;
      } */
      
-     main h1,
-     main p {
+     #intro h1,
+     #intro p {
           text-align: center;
      }
 
-     main .cta {
+     #intro .cta {
           font-size: 0.9rem;
      }
-     main a:last-of-type{
+     #intro a:last-of-type{
           margin-top: 1rem;
      }
 
@@ -657,7 +671,7 @@ main.invert #toggleMode:hover {
           padding: 0.2rem 1rem;
           border-left: none;
           border-bottom: 0.1rem solid hsl(187, 75%, 59%);
-          background: hsla(0, 0%, 100%, 0.279);
+          background: hsla(0, 0%, 100%, 0.15);
      }
      .work {
           max-width: 100%;
@@ -700,7 +714,7 @@ main.invert #toggleMode:hover {
 }
 
 @media screen and (max-width:598px){
-     header nav.menu {
+     #top header nav.menu {
           display: none;
      }
      
@@ -819,20 +833,20 @@ main.invert #toggleMode:hover {
           }
      }
 
-     main {
+     #intro {
           padding: 6rem 1rem 4rem 1rem;
      }
-     main h1 {
+     #intro h1 {
           font-size: 2.5rem;
      }
-     main p{
+     #intro p{
           line-height: 1.7rem;
           margin: 1rem 2rem;
      }
-     main p:first-of-type {
+     #intro p:first-of-type {
           font-size: 1.3rem;
      }
-     main button.cta {
+     #intro button.cta {
           line-height: 1.2rem;
           font-size: 0.6rem;
           padding: 0.8rem 1.5rem;
@@ -866,6 +880,7 @@ main.invert #toggleMode:hover {
      #services p {
           line-height: 1.4rem;
      }
+
 
      #about p {
           padding: 0 2rem;
