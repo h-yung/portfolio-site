@@ -17,7 +17,7 @@ While there are a few design similarities here and there to an older design, I b
 ## Optimizations
 * Reorganize the CSS to reduce repetition and make things more findable.
 * Try building with a mobile-first approach instead.
-* Run through axe DevTools and address identified accessibility issues.
+* Continue working through accessibility issues.
 * Build new form for contact submissions.
 
 ## Lessons learned
@@ -26,6 +26,8 @@ While there are a few design similarities here and there to an older design, I b
 * Animated gif behind an overlay is probably not the best for accessibility...
 * Being concise is hard for me. Poor word : image ratio.
 * Stealing and adapting different modules from past projects - need to make more organized and reusable, or just expect that this will be a nonissue if I had used a library.
+* Need additional tools to check accessibility - esp. color contrast questions.
+* Structuring the HTML - e.g., links contained inside a nav, compared with <ul> with child list elements containing links, makes it easier to enlarge clickable areas for touchscreen.
 
 ## Related projects
 **Cafe website:** https://github.com/h-yung/website-cafe
