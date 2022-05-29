@@ -288,35 +288,38 @@ img[alt="idyll cafe"]{
 
 #top header nav.menu {
      /* flex container */
+     flex-direction: column;
+     justify-content: space-evenly;
+     width: 100%;
      font-size: 2em;
      font-weight: 300;
      /* font-family: 'Inconsolata', monospace; */
      text-transform: uppercase;
      height: 100%;
+     background: hsla(0, 0%, 100%, 0.15);
      /* border: 1px solid white; */
 }
 
-nav.menu ul {
+/* nav.menu ul {
      width: 100%;
      /* flex container */
-     flex-direction: column;
-     justify-content: space-evenly;
-}
+     /* flex-direction: column;
+     justify-content: space-evenly; */
+/* }  */
 
-nav.menu li {
+nav.menu > a {
      width: 100%;
      height: 100%;
      padding: 4rem 2rem;
-     background: hsla(0, 0%, 100%, 0.15);
      justify-self: center;
      transform: all 0.5s ease-out 0s;
 }
 
-nav.menu li:hover{
+nav.menu > :hover{
      background: none; 
      border-left: 0.4rem solid hsl(187, 75%, 59%);
 }
-nav.menu li a:hover {
+nav.menu > a:hover {
      /* color:white; */
      transform: all 0.5s ease-out 0s;
 }
@@ -497,7 +500,7 @@ footer {
      background: hsla(10, 30%, 90%, 1);
 }
 
-nav.menu li.invert {
+nav.menu a.invert {
      /* since inversion is reversion */
      background: black;
 }
@@ -612,23 +615,23 @@ nav.menu li.invert {
 
      #top header nav.menu {
           font-size: 1rem;
+          height: 4rem; /*max 2 lines before transitions to burger menu*/
           width: 100%;
-     }
-
-     #top header nav.menu ul {
           flex-direction: row;
+          background: rgba(0, 0, 0, 0.5); 
      }
-     nav.menu li {
+     nav.menu a {
           display: flex;
           justify-content: center;
           align-items: center;
+          height: 100%;
           text-align: center;
           font-weight: bold;
           line-height: 1.2em;
           padding: 1.1rem;
-          /* background: rgba(0, 0, 0, 0.5); */
+          
      }
-     nav.menu li:hover{
+     nav.menu a:hover{
           background: black; 
           border-left: none;
           border-bottom: 0.2rem solid hsl(187, 75%, 59%);
