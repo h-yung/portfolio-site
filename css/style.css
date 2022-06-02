@@ -128,7 +128,7 @@ button.cta:hover{
      color: hsl(187, 75%, 59%);
 }
 button[type="submit"] {
-     margin-top: 1rem;
+     margin-top: 2rem;
 }
 
 form {
@@ -798,6 +798,9 @@ nav.menu a.invert {
      input[type='text'],
      input[type='email']{
           width: 20rem;
+     }
+     button[type="submit"] {
+          margin-top: 1rem;
      }
 }
 
