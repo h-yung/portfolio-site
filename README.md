@@ -18,7 +18,6 @@ While there are a few design similarities here and there to an older design, I b
 * Reorganize the CSS to reduce repetition and make things more findable.
 * Try building with a mobile-first approach instead.
 * Continue working through accessibility issues.
-* Build new form for contact submissions.
 
 ## Lessons learned
 * GIFs can become extremely memory- and load-time-intensive. At some point it would be better to just embed video.
