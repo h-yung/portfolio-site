@@ -127,6 +127,50 @@ button.cta:hover{
      background: hsla(0, 0%, 100%, 0.279);
      color: hsl(187, 75%, 59%);
 }
+button[type="submit"] {
+     margin-top: 1rem;
+}
+
+form {
+     width: 100%;
+}
+fieldset {
+     /* flex container */
+     justify-content: space-between;
+     width: 90%;
+     margin: 1.5rem 0;
+}
+
+label.cta {
+     /* flex container */
+     align-items: baseline;
+     width: 80%;
+}
+label.cta:hover {
+     cursor:default;
+}
+
+label.cta:last-of-type {
+     justify-content: flex-end;
+}
+
+label[for='burgerInput'],
+label[for="showAll"],
+label[for="showDev"],
+label[for="showDesign"] {
+     padding: 0.2rem 1.2rem;
+     transition: all 0.2s ease-in 0s;
+}
+
+label[for='burgerInput']:hover,
+label[for="showAll"]:hover,
+label[for="showDev"]:hover,
+label[for="showDesign"]:hover {
+     cursor: pointer;
+     padding: 0.2rem 1rem;
+     /* color:hsl(187, 75%, 59%); */
+     border-left: 0.2rem solid hsl(187, 75%, 59%);
+}
 
 input[type='radio'] {
      position: fixed;
@@ -135,16 +179,19 @@ input[type='radio'] {
      padding: 0.5rem 1.2rem;
 }
 
-label {
-     padding: 0.2rem 1.2rem;
-     transition: all 0.2s ease-in 0s;
+input[type='text'],
+input[type='email'] {
+     margin: 1rem;
+     width: 20rem;
+     padding: 0.5rem 1rem;
 }
 
-label:hover {
-     cursor: pointer;
-     padding: 0.2rem 1rem;
-     /* color:hsl(187, 75%, 59%); */
-     border-left: 0.2rem solid hsl(187, 75%, 59%);
+textarea {
+     display: block;
+     margin: 1rem 0;
+     padding: 0.5rem 1rem;
+     min-height: 6rem;
+     min-width: 90%;
 }
 
 input[type='radio']:checked + label {
@@ -561,6 +608,32 @@ nav.menu a.invert {
      }
 }
 
+@media screen and (max-width:1090px){
+     fieldset {
+          width: 100%;
+     }
+     input[type='text'],
+     input[type='email'] {
+          width: 74%;
+     }
+     textarea {
+          min-width: 100%;
+     }
+}
+
+@media screen and (max-width:1015px){
+     fieldset {
+          flex-direction: column;
+     }
+     label.cta:last-of-type {
+          justify-content: flex-start;
+     }
+     input[type='text'],
+     input[type='email'] {
+          width: 20rem;
+     }
+}
+
 @media screen and (max-width:899px){
 
      main > *,
@@ -670,7 +743,9 @@ nav.menu a.invert {
           line-height: 1.5em;
           padding:0.4rem 1rem;
      }
-     label:hover {
+     label[for="showAll"]:hover,
+     label[for="showDev"]:hover,
+     label[for="showDesign"]:hover {
           cursor: pointer;
           padding: 0.2rem 1rem;
           border-left: none;
@@ -700,6 +775,29 @@ nav.menu a.invert {
      #contact,
      footer {
           text-align: center;
+     }
+     form {
+          /* now a flex container */
+          display:flex;
+          flex-direction: column;
+          align-items: center;
+     }
+
+     fieldset {
+          align-items: center;
+     }
+
+     label.cta,
+     label.cta:last-of-type {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          margin-bottom: 1rem;
+     }
+     input[type='text'],
+     input[type='email']{
+          width: 100%;
      }
 }
 
@@ -792,8 +890,6 @@ nav.menu a.invert {
           visibility: hidden;
           position: absolute; /*otherwise weird header margins*/
      }
-
-
      #burgerInput:checked + #burgerMenu {
           background: linear-gradient(
                to bottom, 
@@ -898,10 +994,10 @@ nav.menu a.invert {
      #contact {
           padding: 3rem;
      }
+
      footer {
           padding: 3rem;
           font-size: 0.6rem;
      }
-
 
 }
