@@ -136,8 +136,8 @@ form {
 }
 fieldset {
      /* flex container */
-     justify-content: space-between;
-     width: 90%;
+     flex-direction:column;
+     width: 100%;
      margin: 1.5rem 0;
 }
 
@@ -148,10 +148,6 @@ label.cta {
 }
 label.cta:hover {
      cursor:default;
-}
-
-label.cta:last-of-type {
-     justify-content: flex-end;
 }
 
 label[for='burgerInput'],
@@ -613,28 +609,8 @@ nav.menu a.invert {
 }
 
 @media screen and (max-width:1090px){
-     fieldset {
-          width: 100%;
-     }
-     input[type='text'],
-     input[type='email'] {
-          width: 74%;
-     }
      textarea {
           min-width: 100%;
-     }
-}
-
-@media screen and (max-width:1015px){
-     fieldset {
-          flex-direction: column;
-     }
-     label.cta:last-of-type {
-          justify-content: flex-start;
-     }
-     input[type='text'],
-     input[type='email'] {
-          width: 20rem;
      }
 }
 
@@ -798,10 +774,6 @@ nav.menu a.invert {
           align-items: center;
           width: 100%;
           margin-bottom: 1rem;
-     }
-     input[type='text'],
-     input[type='email']{
-          width: 20rem;
      }
      button[type="submit"] {
           margin-top: 1rem;
