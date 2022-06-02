@@ -436,7 +436,7 @@ nav.menu > a:hover {
      /* flex container unlike the rest - flex direction is row */
      flex-direction: row;
 }
-#about ul.social {
+.social {
      /* flex container */
      width: 8rem;
      font-size: 2rem;
@@ -444,10 +444,10 @@ nav.menu > a:hover {
      margin-top: 1rem;
 }
 
-#about ul.social a {
+.social a {
      transition: all 0.5s ease-in 0s;
 }
-#about ul.social a:hover {
+.social a:hover {
     color: white;
 }
 
@@ -563,6 +563,10 @@ nav.menu a.invert {
      background: hsla(0, 0%, 100%, 0.279);
      color: hsl(187, 75%, 59%);
      font-weight: bold;
+}
+
+.invert .social a:hover {
+     color: hsla(187, 75%, 59%, 0.527);
 }
 
 #intro.invert a {
