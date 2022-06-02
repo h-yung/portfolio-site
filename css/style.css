@@ -136,16 +136,20 @@ form {
 }
 fieldset {
      /* flex container */
-     flex-direction:column;
      width: 100%;
-     margin: 1.5rem 0;
+     justify-content: flex-start;
 }
 
 label.cta {
      /* flex container */
-     align-items: baseline;
-     width: 80%;
+     flex-direction: column;
+     margin: 1.5rem 3rem 0 0;
 }
+label[data-name="message"] {
+     display: block; /*for margin top*/
+     margin-top: 2rem;
+}
+
 label.cta:hover {
      cursor:default;
 }
@@ -177,9 +181,13 @@ input[type='radio'] {
 
 input[type='text'],
 input[type='email'] {
-     margin: 1rem;
+     margin-top: 1rem;
      width: 20rem;
      padding: 0.5rem 1rem;
+}
+
+input[name='subject'] {
+     width: 30rem;
 }
 
 textarea {
@@ -690,12 +698,6 @@ nav.menu a.invert {
           border-left: none;
           border-bottom: 0.2rem solid hsl(187, 75%, 59%);
      }
-
-     /* .invert nav.menu li:hover {
-          background: white;
-          color:hsl(187, 75%, 59%);
-          font-weight: bold;
-     } */
      
      #intro h1,
      #intro p {
@@ -764,11 +766,11 @@ nav.menu a.invert {
      }
 
      fieldset {
+          flex-direction: column;
           align-items: center;
      }
 
-     label.cta,
-     label.cta:last-of-type {
+     label.cta {
           display: flex;
           flex-direction: column;
           align-items: center;
