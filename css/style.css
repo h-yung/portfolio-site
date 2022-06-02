@@ -797,7 +797,7 @@ nav.menu a.invert {
      }
      input[type='text'],
      input[type='email']{
-          width: 100%;
+          width: 20rem;
      }
 }
 
@@ -993,6 +993,10 @@ nav.menu a.invert {
 
      #contact {
           padding: 3rem;
+     }
+     input[type='text'],
+     input[type='email']{
+          width: 100%;
      }
 
      footer {
