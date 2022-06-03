@@ -775,7 +775,7 @@ nav.menu a.invert {
           flex-direction: column;
           align-items: center;
           width: 100%;
-          margin-bottom: 1rem;
+          margin: 0 0 1rem 0;
      }
      button[type="submit"] {
           margin-top: 1rem;
