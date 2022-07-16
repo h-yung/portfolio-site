@@ -26,7 +26,7 @@ While there are a few design similarities here and there to an older design, I b
 * Being concise is hard for me. Poor word : image ratio.
 * Stealing and adapting different modules from past projects - need to make more organized and reusable, or just expect that this will be a nonissue if I had used a library.
 * Need additional tools to check accessibility - esp. color contrast questions.
-* Structuring the HTML - e.g., links contained inside a nav, compared with <ul> with child list elements containing links, makes it easier to enlarge clickable areas for touchscreen.
+* Structuring the HTML - e.g., links contained inside a nav, compared with `<ul>` with child list elements containing links, makes it easier to enlarge clickable areas for touchscreen.
 
 ## Related projects
 **Cafe website:** https://github.com/h-yung/website-cafe
