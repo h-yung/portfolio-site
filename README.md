@@ -15,6 +15,7 @@ While there are a few design similarities here and there to an older design, I b
 * Animation at top of mobile view (dark mode)
 
 ## Optimizations
+* `color-scheme: light dark` ...
 * Reorganize the CSS to reduce repetition and make things more findable.
 * Try building with a mobile-first approach instead.
 * Continue working through accessibility issues.
