@@ -12,11 +12,6 @@
 poppins
 ital,wght@0,200;0,400;0,700;0,800;1,400;1,600
 
-display
-inconsolata - monospace
-300;400;500;700
-
-
 gen-
 LR 7rem
 
@@ -204,11 +199,18 @@ input[type='radio']:checked + label {
 }
 .work h3,
 #services h3 {
-     font-weight:300;
      font-size: 1.2rem;
      letter-spacing: 0.2em;
      text-transform: uppercase;
      margin: 1rem 0;
+}
+
+.work h3 {
+     font-weight: 500;
+}
+
+#services h3 {
+     font-weight:300;
 }
 
 .work p {
@@ -238,10 +240,14 @@ input[type='radio']:checked + label {
      overflow: hidden;
 }
 
+.imgContainer {
+     box-shadow: 0.5rem 0.5rem 1rem hsla(0, 0%, 0%, 0.117);
+}
+
 .imgContainer img {
      width: 100%;
      object-fit: cover; 
-     object-position: top;
+     object-position: top left;
 }
 /* specific fixes */
 img[alt="diversion bar mobile"]{
