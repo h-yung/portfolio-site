@@ -15,7 +15,7 @@ While there are a few design similarities here and there to an older design, I b
 * Animation at top of mobile view (dark mode)
 
 ## Optimizations
-* `color-scheme: light dark` ...
+* Current commentary on the light/dark mode toggle is that my previous implementation was so catastrophically inverted that reworking it to function with :root is unnecessarily difficult. The website toggle is the only way to change modes; it is not connected to system prefs/media query.
 * Reorganize the CSS to reduce repetition and make things more findable.
 * Try building with a mobile-first approach instead.
 * Continue working through accessibility issues.

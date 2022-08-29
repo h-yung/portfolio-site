@@ -15,6 +15,9 @@
 toggleMode.addEventListener('click', toggleLightDark)
 
 function toggleLightDark(){
+    // const useLight = window.matchMedia("(prefers-color-scheme: light)")
+
+    
     // despite structural efforts, currently a bit specific
     intro.classList.toggle('invert')
     // ctaImportant.classList.toggle('invert')
