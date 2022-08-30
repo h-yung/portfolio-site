@@ -243,6 +243,10 @@ input[type='radio']:checked + label {
 .imgContainer {
      box-shadow: 0.5rem 0.5rem 1rem hsla(0, 0%, 0%, 0.117);
 }
+/* except for intro img */
+#intro .imgContainer {
+     box-shadow: none;
+}
 
 .imgContainer img {
      width: 100%;
