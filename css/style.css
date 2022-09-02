@@ -240,12 +240,8 @@ input[type='radio']:checked + label {
      overflow: hidden;
 }
 
-.imgContainer {
+.imgContainer.light {
      box-shadow: 0.5rem 0.5rem 1rem hsla(0, 0%, 0%, 0.117);
-}
-/* except for intro img */
-#intro .imgContainer {
-     box-shadow: none;
 }
 
 .imgContainer img {
@@ -262,7 +258,6 @@ img[alt="idyll cafe"]{
      width: 102%;
      object-position: top left;
 }
-
 
 /* mobile- */
 .overlay { /*for ref*/
