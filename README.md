@@ -1,7 +1,7 @@
 # Portfolio website
 New responsive portfolio website (v.2), built from the ground up with as little JavaScript as possible.
 
-**Live**: https://hyung.netlify.app/
+## [Live here](https://hyung.netlify.app/)
 
 ![portfolio website preview](https://i.postimg.cc/ht8XVzqW/portfolio-redux-desktop.png)
 
