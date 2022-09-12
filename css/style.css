@@ -383,6 +383,26 @@ nav.menu > a:hover {
      margin: 2rem 2rem 0 0;
 }
 
+#freeze {
+     font-family: inherit;
+     font-size: 0.8rem;
+     letter-spacing: 0.2em;
+     text-transform: uppercase;
+     color: white;
+     background: none;
+     border: none;
+     cursor: pointer;
+     text-align: left;
+     margin: 0 2rem;
+}
+#freeze:focus-visible {
+     outline: 2px solid salmon;
+}
+
+#freeze.invert {
+     color: black;
+}
+
 #intro a {
      color: white;
 }
@@ -630,10 +650,15 @@ nav.menu a.invert {
      #top {
           flex-direction: column;
      }
+
      #top header {
           order: 1;
           width: 100%;
           position: fixed;
+     }
+
+     #freeze {
+          text-align: center;
      }
      
      #intro {
@@ -913,7 +938,7 @@ nav.menu a.invert {
      }
      #intro p{
           line-height: 1.7rem;
-          margin: 1rem 2rem;
+          margin: 1rem;
      }
      #intro p:first-of-type {
           font-size: 1.3rem;

@@ -2,6 +2,8 @@
 New responsive portfolio website (v.2), built from the ground up with as little JavaScript as possible.
 It's not very accessible - so that would be the next big refresh.
 
+Recently added: Option to permanently stop the header and most of the work examples, because it's not helpful for some users.
+
 ## [Live here](https://hyung.netlify.app/)
 
 ![portfolio website preview](https://i.postimg.cc/ht8XVzqW/portfolio-redux-desktop.png)

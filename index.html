@@ -39,14 +39,21 @@
 			</header>
 			<section id="intro">
 				<section class="imgContainer hide">
-					<img src="images/AHUber-instructions_deliveryanim.gif" alt="dino running">
+					<img src="images/AHUber-instructions_deliveryanim.gif" alt="dino running" data-info="anim">
 				</section>
 				<h1>Hi, I'm Helen &#123;</h1>
 				<p>A curiosity-driven software engineer and creative collaborator:</p>
 				<p>I love getting stuck into the details of creating something that's fun to use, and working where design and development intersect.</p>
 				<a href="#services"><button id="goServices" class="cta">Need web development or design?</button></a>
-				<span id="toggleMode" aria-pressed="false" role="button" class="cta"><i class="fa-solid fa-circle-half-stroke"></i> Change mode</span>
-				<a href="https://github.com/h-yung/portfolio-site" target="_blank" class="fa-brands fa-github" aria-label="GitHub page" tabindex= "0"><span class="cta"> See website code</span></a>
+				
+				<span id="toggleMode" aria-pressed="false" role="button" class="cta">
+					<i class="fa-solid fa-circle-half-stroke" tabindex="0"></i> 
+					Change mode
+				</span>
+				<a href="https://github.com/h-yung/portfolio-site" target="_blank" tabindex="0" class="fa-brands fa-github" aria-label="GitHub page">
+					<span class="cta"> See website code</span>
+				</a>
+				<button type="button" tabindex="0" id="freeze">(Animations too much? Click here to stop them all.)</button>
 
 			</section>
 		</section>
@@ -71,7 +78,7 @@
 					<input type="radio" name="work" id="showDesign"><label for="showDesign" class="cta">Design &plus; other projects</label>
 					<section class="container wrapper">
 						<section class="work dev">
-							<span class="imgContainer"><img src="images/web-dev/smart-shoppingC.gif" alt="smart shopping app"></span>
+							<span class="imgContainer"><img src="images/web-dev/smart-shoppingC.gif" alt="smart shopping app" class="work__shopList"></span>
 							<a href="https://tcl-46-smart-shopping-list.web.app/" target="_blank">
 								<h3>Smart Shopping List</h3>
 							</a>
@@ -79,7 +86,7 @@
 							<a href="https://github.com/h-yung/tcl-46-smart-shopping-list" target="_blank" class="fa-brands fa-github" aria-label="GitHub page" tabindex= "0"><span class="cta"> Code</span></a>
 						</section>
 						<section class="work dev">
-							<span class="imgContainer"><img src="images/web-dev/naginata_notebook.gif" alt="jargon guide"></span>
+							<span class="imgContainer"><img src="images/web-dev/naginata_notebook.gif" alt="naginata notes" class="work__naginata"></span>
 							<a href="https://naginata-notes.cyclic.app/" target="_blank">
 								<h3>Naginata Notes</h3>
 							</a>
@@ -87,7 +94,7 @@
 							<a href="https://github.com/h-yung/naginata-notes" target="_blank" class="fa-brands fa-github" aria-label="GitHub page" tabindex= "0"><span class="cta"> Code</span></a>
 						</section>
 						<section class="work dev">
-							<span class="imgContainer"><img src="images/web-dev/jargon-anim.gif" alt="jargon guide"></span>
+							<span class="imgContainer"><img src="images/web-dev/jargon-anim.gif" alt="jargon guide" class="work__jargon"></span>
 							<a href="https://jargonauts.netlify.app/" target="_blank">
 								<h3>Jargonauts Guide</h3>
 							</a>
@@ -103,7 +110,7 @@
 							<p>Responsive website. HTML, CSS, and a touch of JavaScript.</p>
 						</section>
 						<section class="work dev">
-							<span class="imgContainer"><img src="images/web-dev/idyll-cafe-redC.gif" alt="idyll cafe"></span>
+							<span class="imgContainer"><img src="images/web-dev/idyll-cafe-redC.gif" alt="idyll cafe" class="work__cafe"></span>
 							<a href="https://idyll-cafe.netlify.app/" target="_blank">
 								<h3>Idyll Cafe &amp; Bakery</h3>
 							</a>
@@ -111,7 +118,7 @@
 							<a href="https://github.com/h-yung/website-cafe" target="_blank" class="fa-brands fa-github" aria-label="GitHub page" tabindex= "0"><span class="cta"> Code</span></a>
 						</section>
 						<section class="work dev">
-							<span class="imgContainer"><img src="images/web-dev/memory_demo.gif" alt="pokemon memory game"></span>
+							<span class="imgContainer"><img src="images/web-dev/memory_demo.gif" alt="pokemon memory game" class="work__memory"></span>
 							<a href="https://h-yung.github.io/memory-challenge/" target="_blank">
 								<h3>Memory Challenge</h3>
 							</a>
@@ -120,7 +127,7 @@
 						</section>
 
 						<section class="work vis">
-							<span class="imgContainer"><img src="images/gallery/thumbs/logo_seasons_Res.gif" alt="business logo design"></span>
+							<span class="imgContainer"><img src="images/gallery/thumbs/logo_seasons_Res.gif" alt="business logo design" class="work__seasons"></span>
 							<h3>Seasons by Jennifer O'Shea</h3>
 							<p>Logo design and visual identity consulting for a local doorscaping business.</p>
 						</section>
@@ -137,7 +144,7 @@
 							<a href="images/gallery/fulls/03_banners_bizletterApp.jpg" target="_blank"><span class="cta">See more</span></a>
 						</section>
 						<section class="work vis">
-							<span class="imgContainer"><img src="images/gallery/thumbs/logo_ryukotaikai.gif" alt="event logo design"></span>
+							<span class="imgContainer"><img src="images/gallery/thumbs/logo_ryukotaikai.gif" alt="event logo design" class="work__ryuko"></span>
 							<h3>Ryuko Taikai 2022</h3>
 							<p>Logo design for the first and largest intercollegiate kendo tournament in North America since the pandemic.</p>
 						</section>
