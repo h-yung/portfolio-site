@@ -86,6 +86,10 @@ li {
      text-transform: uppercase;
      letter-spacing: 0.2em;
 }
+span.cta {
+     display:block;
+     padding: 0.5rem 0;
+}
 
 .cta:hover {
      cursor: pointer;
@@ -379,9 +383,9 @@ nav.menu > a:hover {
      margin: 4em 0 2em 0;
 }
 
-#toggleMode {
+/* #toggleMode {
      margin: 2rem 2rem 0 0;
-}
+} */
 
 #freeze {
      font-family: inherit;
@@ -393,8 +397,12 @@ nav.menu > a:hover {
      border: none;
      cursor: pointer;
      text-align: left;
-     margin: 0 2rem;
+     line-height: 1.5rem;
 }
+#freeze:hover {
+     color: hsl(187, 75%, 59%);
+}
+
 #freeze:focus-visible {
      outline: 2px solid salmon;
 }
@@ -413,7 +421,7 @@ nav.menu > a:hover {
 }
 #intro a span {
      font-family: 'Poppins', sans-serif;
-     margin-right: 1rem;
+     margin-top: 2rem;
 }
 
 #toggleMode:hover {
