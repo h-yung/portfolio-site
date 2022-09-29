@@ -399,8 +399,12 @@ nav.menu > a:hover {
      text-align: left;
      line-height: 1.5rem;
 }
-#freeze:hover {
+#freeze:hover,
+#freeze.invert:hover {
      color: hsl(187, 75%, 59%);
+}
+#freeze.invert:hover {
+     font-weight: bold;
 }
 
 #freeze:focus-visible {
