@@ -1,9 +1,9 @@
 * {
-     box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .wrapper {
-     display: flex;
+	display: flex;
 }
 
 /******************************************
@@ -18,266 +18,268 @@ LR 7rem
 /*******************************************/
 
 html {
-     scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 body {
-     background: black;
-     color: white;
-     font-family: 'Poppins', sans-serif;
+	background: black;
+	color: white;
+	font-family: "Poppins", sans-serif;
 }
 body > * {
-     /* for invert */
-     transition: all 0.8s ease-in 0s;
+	/* for invert */
+	transition: all 0.8s ease-in 0s;
 }
 
 main > *,
 aside {
-     /* skipping the first containing header and #intro */
-     /* flex container */
-     flex-direction: column;
-     padding: 5rem 7rem;
-     width: 100%;
-     transition: all 0.3s ease-in 0s;
-     /* height: 90vh; */
+	/* skipping the first containing header and #intro */
+	/* flex container */
+	flex-direction: column;
+	padding: 5rem 7rem;
+	width: 100%;
+	transition: all 0.3s ease-in 0s;
+	/* height: 90vh; */
 }
 
 main > *:active,
 main > *:hover,
 aside:active,
 aside:hover {
-     border-left: 0.5rem solid hsl(187, 75%, 59%);
+	border-left: 0.5rem solid hsl(187, 75%, 59%);
 }
 
-h2 { /*converting this to body > section + section > h2 and moving up however gets overridden*/
-     /* background: hsla(0, 0%, 100%, 0.279); */
-     font-weight: 300;
-     letter-spacing: 0.2em;
-     padding: 0.5em 0.5em 0.5em 0;
+h2 {
+	/*converting this to body > section + section > h2 and moving up however gets overridden*/
+	/* background: hsla(0, 0%, 100%, 0.279); */
+	font-weight: 300;
+	letter-spacing: 0.2em;
+	padding: 0.5em 0.5em 0.5em 0;
 }
 
 h1 {
-     font-size: 3rem;
-     font-weight: 200;
-     margin-bottom: 1em;
+	font-size: 3rem;
+	font-weight: 200;
+	margin-bottom: 1em;
 }
 h2 {
-     font-size: 2rem;
-     margin-bottom: 1em;
+	font-size: 2rem;
+	margin-bottom: 1em;
 }
 
 p {
-     line-height: 2em;
-     margin-bottom: 1em;
+	line-height: 2em;
+	margin-bottom: 1em;
 }
 
 a {
-     text-decoration: none;
-     color: hsl(187, 75%, 59%);
-     transform: all 0.5s ease-out 0s;
+	text-decoration: none;
+	color: hsl(187, 75%, 59%);
+	transform: all 0.5s ease-out 0s;
 }
 
 li {
-     font-weight: 300;
+	font-weight: 300;
 }
 
 .cta,
-/*stuff in*/ header.titles { /*links but more important than a. less important alone than w button*/
-     text-transform: uppercase;
-     letter-spacing: 0.2em;
+/*stuff in*/ header.titles {
+	/*links but more important than a. less important alone than w button*/
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
 }
 span.cta {
-     display:block;
-     padding: 0.5rem 0;
+	display: block;
+	padding: 0.5rem 0;
 }
 
 .cta:hover {
-     cursor: pointer;
+	cursor: pointer;
 }
 
 button {
-     display: block; /*own line*/
+	display: block; /*own line*/
 }
 
 button.cta {
-     border-radius: 4rem;
-     padding: 0.5rem 2rem;
-     border: 2px solid hsl(0, 0%, 100%);
-     background: white;
-     transition: all 0.5s ease-out 0s;
+	border-radius: 4rem;
+	padding: 0.5rem 2rem;
+	border: 2px solid hsl(0, 0%, 100%);
+	background: white;
+	transition: all 0.5s ease-out 0s;
 }
-button.cta:hover{
-     border: 2px solid hsl(187, 75%, 59%);
-     background: hsla(0, 0%, 100%, 0.279);
-     color: hsl(187, 75%, 59%);
+button.cta:hover {
+	border: 2px solid hsl(187, 75%, 59%);
+	background: hsla(0, 0%, 100%, 0.279);
+	color: hsl(187, 75%, 59%);
 }
 button[type="submit"] {
-     margin-top: 2rem;
+	margin-top: 2rem;
 }
 
 form {
-     width: 100%;
+	width: 100%;
 }
 fieldset {
-     /* flex container */
-     width: 100%;
-     justify-content: flex-start;
+	/* flex container */
+	width: 100%;
+	justify-content: flex-start;
 }
 
 label.cta {
-     /* flex container */
-     flex-direction: column;
-     margin: 1.5rem 3rem 0 0;
+	/* flex container */
+	flex-direction: column;
+	margin: 1.5rem 3rem 0 0;
 }
 label[data-name="message"] {
-     display: block; /*for margin top*/
-     margin-top: 2rem;
+	display: block; /*for margin top*/
+	margin-top: 2rem;
 }
 
 label.cta:hover {
-     cursor:default;
+	cursor: default;
 }
 
-label[for='burgerInput'],
+label[for="burgerInput"],
 label[for="showAll"],
 label[for="showDev"],
 label[for="showDesign"] {
-     padding: 0.2rem 1.2rem;
-     transition: all 0.2s ease-in 0s;
+	padding: 0.2rem 1.2rem;
+	transition: all 0.2s ease-in 0s;
 }
 
-label[for='burgerInput']:hover,
+label[for="burgerInput"]:hover,
 label[for="showAll"]:hover,
 label[for="showDev"]:hover,
 label[for="showDesign"]:hover {
-     cursor: pointer;
-     padding: 0.2rem 1rem;
-     /* color:hsl(187, 75%, 59%); */
-     border-left: 0.2rem solid hsl(187, 75%, 59%);
+	cursor: pointer;
+	padding: 0.2rem 1rem;
+	/* color:hsl(187, 75%, 59%); */
+	border-left: 0.2rem solid hsl(187, 75%, 59%);
 }
 
-input[type='radio'] {
-     position: fixed;
-     opacity: 0;
-     pointer-events: none;
-     padding: 0.5rem 1.2rem;
+input[type="radio"] {
+	position: fixed;
+	opacity: 0;
+	pointer-events: none;
+	padding: 0.5rem 1.2rem;
 }
 
-input[type='text'],
-input[type='email'] {
-     margin-top: 1rem;
-     width: 20rem;
-     padding: 0.5rem 1rem;
+input[type="text"],
+input[type="email"] {
+	margin-top: 1rem;
+	width: 20rem;
+	padding: 0.5rem 1rem;
 }
 
-input[name='subject'] {
-     width: 30rem;
+input[name="subject"] {
+	width: 30rem;
 }
 
 textarea {
-     display: block;
-     margin: 1rem 0;
-     padding: 0.5rem 1rem;
-     min-height: 6rem;
-     min-width: 90%;
+	display: block;
+	margin: 1rem 0;
+	padding: 0.5rem 1rem;
+	min-height: 6rem;
+	min-width: 90%;
 }
 
-input[type='radio']:checked + label {
-     font-weight:bold;
-     color:hsl(187, 75%, 59%);
+input[type="radio"]:checked + label {
+	font-weight: bold;
+	color: hsl(187, 75%, 59%);
 }
 
 .container {
-     /* inside a section, holds bunches of similar items more complex than typical list*/
-     width: 100%;
-     margin-top: 2rem;
-     /* flex container */
-     flex-wrap: wrap;
+	/* inside a section, holds bunches of similar items more complex than typical list*/
+	width: 100%;
+	margin-top: 2rem;
+	/* flex container */
+	flex-wrap: wrap;
 }
 
 /* inside container */
 .work {
-     max-width: 50%;
-     width: 50%;
-     padding: 5%;
+	max-width: 50%;
+	width: 50%;
+	padding: 5%;
 }
 .work h3,
 #services h3 {
-     font-size: 1.2rem;
-     letter-spacing: 0.2em;
-     text-transform: uppercase;
-     margin: 1rem 0;
+	font-size: 1.2rem;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	margin: 1rem 0;
 }
 
 .work h3 {
-     font-weight: 500;
+	font-weight: 500;
 }
 
 #services h3 {
-     font-weight:300;
+	font-weight: 300;
 }
 
 .work p {
-     line-height: 1.4em;
-     margin-bottom: 1.2em;
+	line-height: 1.4em;
+	margin-bottom: 1.2em;
 }
 
-.work a:first-of-type{
-     display: block; /*have own line*/
-     margin-bottom: 0.65em;
+.work a:first-of-type {
+	display: block; /*have own line*/
+	margin-bottom: 0.65em;
 }
 .work a span,
 .work span {
-     font-family: 'Poppins', sans-serif;
-     font-weight: bold;
+	font-family: "Poppins", sans-serif;
+	font-weight: bold;
 }
 .work a:hover {
-     color: hsl(0, 0%, 100%);
+	color: hsl(0, 0%, 100%);
 }
 
 .container .imgContainer {
-     /* outside of .container parents, can also work as standalone feature */
-     /* do not set "max-width" as img child element sizing won't work */
-     display: inline-block; /*enable height specs*/
-     width: 100%; 
-     height: 70%;
-     overflow: hidden;
+	/* outside of .container parents, can also work as standalone feature */
+	/* do not set "max-width" as img child element sizing won't work */
+	display: inline-block; /*enable height specs*/
+	width: 100%;
+	height: 70%;
+	overflow: hidden;
 }
 
 .imgContainer.light {
-     box-shadow: 0.5rem 0.5rem 1rem hsla(0, 0%, 0%, 0.117);
+	box-shadow: 0.5rem 0.5rem 1rem hsla(0, 0%, 0%, 0.117);
 }
 
 .imgContainer img {
-     width: 100%;
-     object-fit: cover; 
-     object-position: top left;
+	width: 100%;
+	object-fit: cover;
+	object-position: top left;
 }
 /* specific fixes */
-img[alt="diversion bar mobile"]{
-     object-position: center;
+img[alt="diversion bar mobile"] {
+	object-position: center;
 }
 
-img[alt="idyll cafe"]{
-     width: 102%;
-     object-position: top left;
+img[alt="idyll cafe"] {
+	width: 102%;
+	object-position: top left;
 }
 
 /* mobile- */
-.overlay { /*for ref*/
-     visibility: hidden;
-     opacity: 0;
-     position: fixed;
-     top: 0;
-     left: 0;
-     width: 100%; /*cover entire screen*/
-     height: 100%;
-     transition: opacity .35s, visibility .35s, height .35s;
-     overflow: hidden;
-     background: black;
-     z-index: -1; /*put behind all*/
+.overlay {
+	/*for ref*/
+	visibility: hidden;
+	opacity: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%; /*cover entire screen*/
+	height: 100%;
+	transition: opacity 0.35s, visibility 0.35s, height 0.35s;
+	overflow: hidden;
+	background: black;
+	z-index: -1; /*put behind all*/
 }
-
 
 /******************************************
 /* LAYOUT
@@ -285,102 +287,103 @@ img[alt="idyll cafe"]{
 
 /* top level section */
 #top {
-     /* flex container */
-     /* height: 100vh; */
-     background: linear-gradient(hsla(0, 0%, 0%, 0.550),rgba(0, 0, 0, 0.550)), url("../images/AHUber-instructions_deliveryanim.gif") no-repeat;
-     background-size: 70%;
-     background-position: 100% center;
+	/* flex container */
+	/* height: 100vh; */
+	background: linear-gradient(hsla(0, 0%, 0%, 0.55), rgba(0, 0, 0, 0.55)),
+		url("../images/AHUber-instructions_deliveryanim.gif") no-repeat;
+	background-size: 70%;
+	background-position: 100% center;
 }
 
 #top header {
-     order: 2;
-     width: 30%;
+	order: 2;
+	width: 30%;
 }
 #intro {
-     order: 1;
-     /* height: 100vh; */
-     max-width: 70%;
-     width: 70%;
-     padding: 8rem 7rem;
-     transition: all 0.8s ease-in 0s; /*for invert*/
+	order: 1;
+	/* height: 100vh; */
+	max-width: 70%;
+	width: 70%;
+	padding: 8rem 7rem;
+	transition: all 0.8s ease-in 0s; /*for invert*/
 }
 
 #feature,
 #contact,
 #services {
-     background: hsla(0, 17%, 14%, 0.65);
+	background: hsla(0, 17%, 14%, 0.65);
 }
 
 #feature h2 {
-     padding: 1em 0;
-     font-size: 1rem;
+	padding: 1em 0;
+	font-size: 1rem;
 }
 #feature h2::before {
-     margin-bottom: 1rem;
-     display: block;
-     content: "";
-     height: 2px;
-     width: 6rem;
-     background: white;
-     transition: all 0.8s ease-in 0s;
+	margin-bottom: 1rem;
+	display: block;
+	content: "";
+	height: 2px;
+	width: 6rem;
+	background: white;
+	transition: all 0.8s ease-in 0s;
 }
 
 #feature.invert h2::before {
-     background: black;
+	background: black;
 }
 
 /*********************/
 
 #top header nav.menu {
-     /* flex container */
-     flex-direction: column;
-     justify-content: space-evenly;
-     width: 100%;
-     font-size: 2em;
-     font-weight: 300;
-     /* font-family: 'Inconsolata', monospace; */
-     text-transform: uppercase;
-     height: 100%;
-     
-     /* border: 1px solid white; */
+	/* flex container */
+	flex-direction: column;
+	justify-content: space-evenly;
+	width: 100%;
+	font-size: 2em;
+	font-weight: 300;
+	/* font-family: 'Inconsolata', monospace; */
+	text-transform: uppercase;
+	height: 100%;
+
+	/* border: 1px solid white; */
 }
 
 /* nav.menu ul {
      width: 100%;
      /* flex container */
-     /* flex-direction: column;
+/* flex-direction: column;
      justify-content: space-evenly; */
 /* }  */
 
 nav.menu > a {
-     width: 100%;
-     height: 100%;
-     background: hsla(0, 0%, 100%, 0.15);
-     padding: 4rem 2rem;
-     justify-self: center;
-     transform: all 0.5s ease-out 0s;
+	width: 100%;
+	height: 100%;
+	background: hsla(0, 0%, 100%, 0.15);
+	padding: 4rem 2rem;
+	justify-self: center;
+	transform: all 0.5s ease-out 0s;
 }
 
-nav.menu > :hover{
-     background: none; 
-     border-left: 0.4rem solid hsl(187, 75%, 59%);
+nav.menu > :hover {
+	background: none;
+	border-left: 0.4rem solid hsl(187, 75%, 59%);
 }
 nav.menu > a:hover {
-     /* color:white; */
-     transform: all 0.5s ease-out 0s;
+	/* color:white; */
+	transform: all 0.5s ease-out 0s;
 }
 
 #intro p:first-of-type {
-     font-size: 1.5rem;
-     /* margin-left: 2rem; */
+	font-size: 1.5rem;
+	/* margin-left: 2rem; */
 }
 
 #intro .cta {
-     font-size: 0.7rem;
+	font-size: 0.7rem;
 }
 
 #intro button {
-     margin: 4em 0 2em 0;
+	margin: 4em 0 2em 0;
 }
 
 /* #toggleMode {
@@ -388,160 +391,160 @@ nav.menu > a:hover {
 } */
 
 #freeze {
-     font-family: inherit;
-     font-size: 0.8rem;
-     letter-spacing: 0.2em;
-     text-transform: uppercase;
-     color: white;
-     background: none;
-     border: none;
-     cursor: pointer;
-     text-align: left;
-     line-height: 1.5rem;
+	font-family: inherit;
+	font-size: 0.8rem;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	color: white;
+	background: none;
+	border: none;
+	cursor: pointer;
+	text-align: left;
+	line-height: 1.5rem;
 }
 #freeze:hover,
 #freeze.invert:hover {
-     color: hsl(187, 75%, 59%);
+	color: hsl(187, 75%, 59%);
 }
 #freeze.invert:hover {
-     font-weight: bold;
+	font-weight: bold;
 }
 
 #freeze:focus-visible {
-     outline: 2px solid salmon;
+	outline: 2px solid salmon;
 }
 
 #freeze.invert {
-     color: black;
+	color: black;
 }
 
 #intro a {
-     color: white;
+	color: white;
 }
 
 #intro a:hover,
 #intro a:hover span {
-     color:hsl(187, 75%, 59%);
+	color: hsl(187, 75%, 59%);
 }
 #intro a span {
-     font-family: 'Poppins', sans-serif;
-     margin-top: 2rem;
+	font-family: "Poppins", sans-serif;
+	margin-top: 2rem;
 }
 
 #toggleMode:hover {
-     color: hsl(187, 75%, 59%);
+	color: hsl(187, 75%, 59%);
 }
 
 /* MY WORK ***********************************/
 
 #myWork input,
 #myWork label {
-     display: block;
+	display: block;
 }
 
 /*note that .work.dev toggle is checked initially */
 .work.dev,
 .work.vis {
-     display: none;
+	display: none;
 }
 /* toggle visible work */
 #showAll:checked ~ section .work.dev,
 #showAll:checked ~ section .work.vis {
-     display: initial;
+	display: initial;
 }
 #showDev:checked ~ section .work.dev {
-     display: initial;
+	display: initial;
 }
 #showDesign:checked ~ section .work.vis {
-     display: initial;
+	display: initial;
 }
 
 /* ABOUT ***********************************/
 
-#about{
-     /* flex container unlike the rest - flex direction is row */
-     flex-direction: row;
+#about {
+	/* flex container unlike the rest - flex direction is row */
+	flex-direction: row;
 }
 .social {
-     /* flex container */
-     width: 8rem;
-     font-size: 2rem;
-     justify-content: space-between;
-     margin-top: 1rem;
+	/* flex container */
+	width: 8rem;
+	font-size: 2rem;
+	justify-content: space-between;
+	margin-top: 1rem;
 }
 
 .social a {
-     transition: all 0.5s ease-in 0s;
+	transition: all 0.5s ease-in 0s;
 }
 .social a:hover {
-    color: white;
+	color: white;
 }
 
 #about .content + .content {
-     /* flex container */
-     flex-direction: column;
-     align-items: center;
-     margin-left: 3rem;
-     font-size: 0.8rem;
-     line-height: 1rem;
-     text-align: center;
+	/* flex container */
+	flex-direction: column;
+	align-items: center;
+	margin-left: 3rem;
+	font-size: 0.8rem;
+	line-height: 1rem;
+	text-align: center;
 }
 
-#about .content .content p{
-     width: 13rem;
+#about .content .content p {
+	width: 13rem;
 }
 
 #about .imgContainer {
-     /* margin: auto 5rem; */
-     height: 12rem;
-     width: 12rem;
-     margin: 2rem;
-     border-radius: 50%;
-     overflow: hidden;
-     transition: all 0.7s ease-out 0s;
+	/* margin: auto 5rem; */
+	height: 12rem;
+	width: 12rem;
+	margin: 2rem;
+	border-radius: 50%;
+	overflow: hidden;
+	transition: all 0.7s ease-out 0s;
 }
 
 #about .imgContainer:hover {
-     border:2px solid hsl(187, 75%, 59%);
+	border: 2px solid hsl(187, 75%, 59%);
 }
 
 #about .imgContainer img {
-     object-position: bottom;
+	object-position: bottom;
 }
 
 /* SERVICES ***********************************/
 
 #services .content {
-     /* flex container */
-     justify-content: space-between;
+	/* flex container */
+	justify-content: space-between;
 }
 
 #services .content section {
-     width: 45%;
+	width: 45%;
 }
 
 #services .content h3 {
-     color: hsl(187, 75%, 59%);
-     font-weight: bold;
+	color: hsl(187, 75%, 59%);
+	font-weight: bold;
 }
 
 #services .content p {
-     font-size: 1.1rem;
+	font-size: 1.1rem;
 }
 
 #services ul {
-     list-style-type:square;
-     padding-left: 1rem;
-     line-height: 1.5em;
-     /* border-left: 2px solid hsl(187, 75%, 59%); */
+	list-style-type: square;
+	padding-left: 1rem;
+	line-height: 1.5em;
+	/* border-left: 2px solid hsl(187, 75%, 59%); */
 }
 #services li {
-     margin-bottom: 1rem;
-     padding-left: 1rem;
+	margin-bottom: 1rem;
+	padding-left: 1rem;
 }
 
 #services button.cta {
-     margin: 2rem 0;
+	margin: 2rem 0;
 }
 
 /* CONTACT ********************************/
@@ -551,10 +554,10 @@ nav.menu > a:hover {
 
 /* FOOTER ***********************************/
 footer {
-     padding: 2rem 7rem;
-     font-size: 0.7rem;
-     text-transform: uppercase;
-     letter-spacing: 0.2em;
+	padding: 2rem 7rem;
+	font-size: 0.7rem;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
 }
 
 /******************************************
@@ -563,454 +566,460 @@ footer {
 
 /* light mode */
 .invert {
-     background: hsl(40, 20%, 97%);
-     color: black;
+	background: hsl(40, 20%, 97%);
+	color: black;
 }
 
 #feature.invert,
 #contact.invert,
 #services.invert {
-     /* background: hsl(187, 20%, 80%); */
-     background: hsla(10, 30%, 90%, 1);
+	/* background: hsl(187, 20%, 80%); */
+	background: hsla(10, 30%, 90%, 1);
 }
 
 nav.menu a.invert {
-     /* since inversion is reversion */
-     background: black;
+	/* since inversion is reversion */
+	background: black;
 }
 
 .invert button.cta {
-     background: hsl(187, 75%, 59%);
-     border:2px solid hsl(187, 75%, 59%);
-     color: black;
+	background: hsl(187, 75%, 59%);
+	border: 2px solid hsl(187, 75%, 59%);
+	color: black;
 }
 
 .invert button.cta:hover {
-     background: hsla(0, 0%, 100%, 0.279);
-     color: hsl(187, 75%, 59%);
-     font-weight: bold;
+	background: hsla(0, 0%, 100%, 0.279);
+	color: hsl(187, 75%, 59%);
+	font-weight: bold;
 }
 
 .invert .social a:hover {
-     color: hsla(187, 75%, 59%, 0.527);
+	color: hsla(187, 75%, 59%, 0.527);
 }
 
 #intro.invert a {
-     color: black;
+	color: black;
 }
 
 #intro.invert a:hover,
 #intro.invert a:hover span,
 #intro.invert #toggleMode:hover {
-     color:hsl(187, 75%, 59%);
-     font-weight: bold;
+	color: hsl(187, 75%, 59%);
+	font-weight: bold;
 }
 
 .invert .work a {
-     color: hsl(187, 75%, 59%);
+	color: hsl(187, 75%, 59%);
 }
 .invert .work a:hover {
-     font-weight: bold;
+	font-weight: bold;
 }
 
-#services.invert h3{
-     font-weight: bold;
+#services.invert h3 {
+	font-weight: bold;
 }
 
 /* conceal */
 .hide {
-     display: none;
+	display: none;
 }
 
 /******************************************
 /* MEDIA QUERIES
 /*******************************************/
-@media screen and (max-width:1259px){
-     #intro {
-          padding-bottom: 5rem;
-          min-height: 0;
-     }
-     .work {
-          padding: 2%;
-     }
-     .work .imgContainer {
-          height:55%;
-     }
+@media screen and (max-width: 1259px) {
+	#intro {
+		padding-bottom: 5rem;
+		min-height: 0;
+	}
+	.work {
+		padding: 2%;
+	}
+	.work .imgContainer {
+		height: 55%;
+	}
 }
 
-@media screen and (max-width:1090px){
-     textarea {
-          min-width: 100%;
-     }
+@media screen and (max-width: 1090px) {
+	textarea {
+		min-width: 100%;
+	}
 }
 
-@media screen and (max-width:899px){
+@media screen and (max-width: 899px) {
+	main > *,
+	aside {
+		padding: 4rem;
+	}
 
-     main > *,
-     aside {
-          padding: 4rem;
-     }
+	main > *:active,
+	main > *:hover,
+	aside:active,
+	aside:hover {
+		border-left: none;
+		border-top: 0.5rem solid hsl(187, 75%, 59%);
+	}
 
-     main > *:active,
-     main > *:hover,
-     aside:active,
-     aside:hover {
-          border-left: none;
-          border-top: 0.5rem solid hsl(187, 75%, 59%);
-     }
+	#top {
+		flex-direction: column;
+	}
 
-     #top {
-          flex-direction: column;
-     }
+	#top header {
+		order: 1;
+		width: 100%;
+		position: fixed;
+	}
 
-     #top header {
-          order: 1;
-          width: 100%;
-          position: fixed;
-     }
+	#freeze {
+		text-align: center;
+	}
 
-     #freeze {
-          text-align: center;
-     }
-     
-     #intro {
-          order: 2;
-          max-width: none;
-          width: 100%;
-          /* flex container */
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-     }
+	#intro {
+		order: 2;
+		max-width: none;
+		width: 100%;
+		/* flex container */
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 
-     #intro.invert .imgContainer.hide {
-          /* unhiding */
-          display: initial;
-          /* redundant w/ object fit below? */
-     }
-     #intro.invert .imgContainer img {
-          width:15rem;
-          height:15rem;
-          border-radius:50%;
-          /* object-fit works when the image itself needs a width and height */
-          object-fit: cover; 
-          object-position: right;
-     }
+	#intro.invert .imgContainer.hide {
+		/* unhiding */
+		display: initial;
+		/* redundant w/ object fit below? */
+	}
+	#intro.invert .imgContainer img {
+		width: 15rem;
+		height: 15rem;
+		border-radius: 50%;
+		/* object-fit works when the image itself needs a width and height */
+		object-fit: cover;
+		object-position: right;
+	}
 
-     h1 {
-          margin: 2rem 0 1rem 0;
-          width: 100%;
-     }
+	h1 {
+		margin: 2rem 0 1rem 0;
+		width: 100%;
+	}
 
-     #top header nav.menu {
-          font-size: 1rem;
-          height: 4rem; /*max 2 lines before transitions to burger menu*/
-          width: 100%;
-          flex-direction: row;
-          
-     }
-     nav.menu a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 100%;
-          text-align: center;
-          font-weight: bold;
-          line-height: 1.2em;
-          padding: 1.1rem;
-          
-     }
-     nav.menu a:hover{
-          background: black; 
-          border-left: none;
-          border-bottom: 0.2rem solid hsl(187, 75%, 59%);
-     }
-     
-     #intro h1,
-     #intro p {
-          text-align: center;
-     }
+	#top header nav.menu {
+		font-size: 1rem;
+		height: 4rem; /*max 2 lines before transitions to burger menu*/
+		width: 100%;
+		flex-direction: row;
+	}
+	nav.menu a {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		text-align: center;
+		font-weight: bold;
+		line-height: 1.2em;
+		padding: 1.1rem;
+	}
+	nav.menu a:hover {
+		background: black;
+		border-left: none;
+		border-bottom: 0.2rem solid hsl(187, 75%, 59%);
+	}
 
-     #intro .cta {
-          font-size: 0.9rem;
-     }
-     #intro a:last-of-type{
-          margin-top: 1rem;
-     }
+	#intro h1,
+	#intro p {
+		text-align: center;
+	}
 
-     button.cta {
-          font-size: 0.8rem;
-          padding: 1rem 2.5rem;
-     }
+	#intro .cta {
+		font-size: 0.9rem;
+	}
+	#intro a:last-of-type {
+		margin-top: 1rem;
+	}
 
-     #myWork {
-          text-align: center;
-     }
+	button.cta {
+		font-size: 0.8rem;
+		padding: 1rem 2.5rem;
+	}
 
-     #myWork label {
-          font-size: 1.2rem;
-          line-height: 1.5em;
-          padding:0.4rem 1rem;
-     }
-     label[for="showAll"]:hover,
-     label[for="showDev"]:hover,
-     label[for="showDesign"]:hover {
-          cursor: pointer;
-          padding: 0.2rem 1rem;
-          border-left: none;
-          border-bottom: 0.1rem solid hsl(187, 75%, 59%);
-          background: hsla(0, 0%, 100%, 0.15);
-     }
-     .work {
-          max-width: 100%;
-          width: 100%;
-          height: 90%;
-          padding-bottom: 3rem;
-     }
+	#myWork {
+		text-align: center;
+	}
 
-     #services {
-          align-items: center;
-     }
+	#myWork label {
+		font-size: 1.2rem;
+		line-height: 1.5em;
+		padding: 0.4rem 1rem;
+	}
+	label[for="showAll"]:hover,
+	label[for="showDev"]:hover,
+	label[for="showDesign"]:hover {
+		cursor: pointer;
+		padding: 0.2rem 1rem;
+		border-left: none;
+		border-bottom: 0.1rem solid hsl(187, 75%, 59%);
+		background: hsla(0, 0%, 100%, 0.15);
+	}
+	.work {
+		max-width: 100%;
+		width: 100%;
+		height: 90%;
+		padding-bottom: 3rem;
+	}
 
-     #services .content {
-          flex-direction: column;
-     }
-     #services .content section {
-          width: 100%;
-          margin-bottom: 2rem;
-     }
-     
-     #services h2,
-     #contact,
-     footer {
-          text-align: center;
-     }
-     form {
-          /* now a flex container */
-          display:flex;
-          flex-direction: column;
-          align-items: center;
-     }
+	#services {
+		align-items: center;
+	}
 
-     fieldset {
-          flex-direction: column;
-          align-items: center;
-     }
+	#services .content {
+		flex-direction: column;
+	}
+	#services .content section {
+		width: 100%;
+		margin-bottom: 2rem;
+	}
 
-     label.cta {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          width: 100%;
-          margin: 0 0 1rem 0;
-     }
-     button[type="submit"] {
-          margin-top: 1rem;
-     }
+	#services h2,
+	#contact,
+	footer {
+		text-align: center;
+	}
+	form {
+		/* now a flex container */
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	fieldset {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	label.cta {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		margin: 0 0 1rem 0;
+	}
+	button[type="submit"] {
+		margin-top: 1rem;
+	}
 }
 
-@media screen and (max-width:789px){
-     #about {
-          flex-direction: column;
-          text-align: center;
-     }
-     #about content + content {
-          margin-left: 0;
-     }
-     #about .imgContainer {
-          min-width: none;
-          width: 12rem;
-     }
+@media screen and (max-width: 789px) {
+	#about {
+		flex-direction: column;
+		text-align: center;
+	}
+	#about content + content {
+		margin-left: 0;
+	}
+	#about .imgContainer {
+		min-width: none;
+		width: 12rem;
+	}
 }
 
-@media screen and (max-width:598px){
-     #top header nav.menu {
-          display: none;
-     }
-     
-     #burgerMenu {
-          z-index: 2; /*above subsequent elements*/
-          width: 2rem;
-          height: 2rem;
-          display: block;
-          border: none;
-          padding: 0;
-          position: fixed;
-          top: 1rem;
-          right: 0;
-          margin: 0 1rem;
-          background: linear-gradient(
-               to bottom, 
-               hsl(187, 75%, 59%), hsl(187, 75%, 59%) 20%, 
-               rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0) 40%, 
-               hsl(187, 75%, 59%) 40%, hsl(187, 75%, 59%) 60%, 
-               rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 80%, 
-               hsl(187, 75%, 59%) 80%, hsl(187, 75%, 59%) 100%
-          );
-     }
+@media screen and (max-width: 598px) {
+	#top header nav.menu {
+		display: none;
+	}
 
+	#burgerMenu {
+		z-index: 2; /*above subsequent elements*/
+		width: 2rem;
+		height: 2rem;
+		display: block;
+		border: none;
+		padding: 0;
+		position: fixed;
+		top: 1rem;
+		right: 0;
+		margin: 0 1rem;
+		background: linear-gradient(
+			to bottom,
+			hsl(187, 75%, 59%),
+			hsl(187, 75%, 59%) 20%,
+			rgba(255, 255, 255, 0) 20%,
+			rgba(255, 255, 255, 0) 40%,
+			hsl(187, 75%, 59%) 40%,
+			hsl(187, 75%, 59%) 60%,
+			rgba(255, 255, 255, 0) 60%,
+			rgba(255, 255, 255, 0) 80%,
+			hsl(187, 75%, 59%) 80%,
+			hsl(187, 75%, 59%) 100%
+		);
+	}
 
-     #burgerMenu:hover {
-          cursor: pointer;
-     }
-     
-     #burgerMenu > nav {
-          /* flex container */
-          z-index: 3; /*above*/
-          /* visibility: hidden; */
-          position: fixed;
-          opacity: 1;
-          top: -100vh;
-          left: 0;  /*width*/
-          width: 100%;
-          height: 100vh; 
-          background: hsl(187, 75%, 59%);
-          letter-spacing: 0.1em;
-          flex-direction: column;
-          transition: all 0.3s ease-in 0s;
-     }
+	#burgerMenu:hover {
+		cursor: pointer;
+	}
 
-     #burgerMenu > nav > * {
-          line-height: 1.5rem;
-     }
+	#burgerMenu > nav {
+		/* flex container */
+		z-index: 3; /*above*/
+		/* visibility: hidden; */
+		position: fixed;
+		opacity: 1;
+		top: -100vh;
+		left: 0; /*width*/
+		width: 100%;
+		height: 100vh;
+		background: hsl(187, 75%, 59%);
+		letter-spacing: 0.1em;
+		flex-direction: column;
+		transition: all 0.3s ease-in 0s;
+	}
 
-     #burgerMenu > nav a:first-child {
-          margin-top: 6rem;
-     }
+	#burgerMenu > nav > * {
+		line-height: 1.5rem;
+	}
 
-     #burgerMenu > nav a {
-          display:block;
-          padding: 2rem;
-          color: black;
-          text-align: center;
-          font-size: 1.2rem;
-          opacity: 1;
-     }
+	#burgerMenu > nav a:first-child {
+		margin-top: 6rem;
+	}
 
-     #burgerMenu > nav a:hover,
-     #burgerMenu > nav a:active {
-          opacity: 1;
-          color: white;
-          font-weight: bold;
-          background: black;
-     }
+	#burgerMenu > nav a {
+		display: block;
+		padding: 2rem;
+		color: black;
+		text-align: center;
+		font-size: 1.2rem;
+		opacity: 1;
+	}
 
-     #burgerInput {
-          visibility: hidden;
-          position: absolute; /*otherwise weird header margins*/
-     }
-     #burgerInput:checked + #burgerMenu {
-          background: linear-gradient(
-               to bottom, 
-               white, white 20%, 
-               rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0) 40%, 
-               white 40%, white 60%, 
-               rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 80%, 
-               white 80%, white 100%
-          );
-     }
+	#burgerMenu > nav a:hover,
+	#burgerMenu > nav a:active {
+		opacity: 1;
+		color: white;
+		font-weight: bold;
+		background: black;
+	}
 
-     #burgerInput:checked + #burgerMenu > nav {
-          visibility:visible;
-          opacity: 1;
-          top: 0;
-          z-index: 1;
-     }
+	#burgerInput {
+		visibility: hidden;
+		position: absolute; /*otherwise weird header margins*/
+	}
+	#burgerInput:checked + #burgerMenu {
+		background: linear-gradient(
+			to bottom,
+			white,
+			white 20%,
+			rgba(255, 255, 255, 0) 20%,
+			rgba(255, 255, 255, 0) 40%,
+			white 40%,
+			white 60%,
+			rgba(255, 255, 255, 0) 60%,
+			rgba(255, 255, 255, 0) 80%,
+			white 80%,
+			white 100%
+		);
+	}
 
-     #top {
-          /* flex container */
-          /* height: 100vh; */
-          background: linear-gradient(hsla(0, 0%, 0%, 0.550),rgba(0, 0, 0, 0.550)), url("../images/AHUber-instructions_deliveryanim.gif") no-repeat;
-          background-size: 70%;
-          background-position: -30% 3%;
-          /* padding-top: 5rem; */
-          animation: 2s linear 0s infinite none running dinoRun;
-     }
+	#burgerInput:checked + #burgerMenu > nav {
+		visibility: visible;
+		opacity: 1;
+		top: 0;
+		z-index: 1;
+	}
 
-     @keyframes dinoRun {
-          0% {
-               background-position: -30% 3%;
-          }
-          43.75% { /*slow down*/
-               background-position: 190% 3%;
-          }
-          56.25% {
-               background-position: 285% 3%;
-          }
-          100% {
-               background-position: 350% 3%;
-          }
-     }
+	#top {
+		/* flex container */
+		/* height: 100vh; */
+		background: linear-gradient(hsla(0, 0%, 0%, 0.55), rgba(0, 0, 0, 0.55)),
+			url("../images/AHUber-instructions_deliveryanim.gif") no-repeat;
+		background-size: 70%;
+		background-position: -30% 3%;
+		/* padding-top: 5rem; */
+		animation: 2s linear 0s infinite none running dinoRun;
+	}
 
-     #intro {
-          padding: 6rem 1rem 4rem 1rem;
-     }
-     #intro h1 {
-          font-size: 2.5rem;
-     }
-     #intro p{
-          line-height: 1.7rem;
-          margin: 1rem;
-     }
-     #intro p:first-of-type {
-          font-size: 1.3rem;
-     }
-     #intro button.cta {
-          line-height: 1.2rem;
-          font-size: 0.6rem;
-          padding: 0.8rem 1.5rem;
-     }
+	@keyframes dinoRun {
+		0% {
+			background-position: -30% 3%;
+		}
+		43.75% {
+			/*slow down*/
+			background-position: 190% 3%;
+		}
+		56.25% {
+			background-position: 285% 3%;
+		}
+		100% {
+			background-position: 350% 3%;
+		}
+	}
 
-     h2 {
-          font-size: 1.5rem;
-     }
-     #feature {
-          padding: 2rem 1rem;
-     }
+	#intro {
+		padding: 6rem 1rem 4rem 1rem;
+	}
+	#intro h1 {
+		font-size: 2.5rem;
+	}
+	#intro p {
+		line-height: 1.7rem;
+		margin: 1rem;
+	}
+	#intro p:first-of-type {
+		font-size: 1.3rem;
+	}
+	#intro button.cta {
+		line-height: 1.2rem;
+		font-size: 0.6rem;
+		padding: 0.8rem 1.5rem;
+	}
 
-     #myWork,
-     #about {
-          padding: 4rem 1rem;
-     }
+	h2 {
+		font-size: 1.5rem;
+	}
+	#feature {
+		padding: 2rem 1rem;
+	}
 
-     #myWork label {
-          font-size: 1rem;
-     }
-     .work > p {
-          padding: 0 1.5rem;
-     }
-     #services {
-          padding: 2rem;
-     }
+	#myWork,
+	#about {
+		padding: 4rem 1rem;
+	}
 
-     #services h3 {
-          line-height: 1.5rem;
-     }
-     #services p {
-          line-height: 1.4rem;
-     }
+	#myWork label {
+		font-size: 1rem;
+	}
+	.work > p {
+		padding: 0 1.5rem;
+	}
+	#services {
+		padding: 2rem;
+	}
 
+	#services h3 {
+		line-height: 1.5rem;
+	}
+	#services p {
+		line-height: 1.4rem;
+	}
 
-     #about p {
-          padding: 0 2rem;
-          font-size: 0.9rem;
-     }
-     #about .content + .content {
-          margin-left: 0;
-          margin-bottom: 3rem;
-     }
+	#about p {
+		padding: 0 2rem;
+		font-size: 0.9rem;
+	}
+	#about .content + .content {
+		margin-left: 0;
+		margin-bottom: 3rem;
+	}
 
-     #contact {
-          padding: 3rem;
-     }
-     input[type='text'],
-     input[type='email']{
-          width: 100%;
-     }
+	#contact {
+		padding: 3rem;
+	}
+	input[type="text"],
+	input[type="email"] {
+		width: 100%;
+	}
 
-     footer {
-          padding: 3rem;
-          font-size: 0.6rem;
-     }
-
+	footer {
+		padding: 3rem;
+		font-size: 0.6rem;
+	}
 }
