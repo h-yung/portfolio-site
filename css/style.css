@@ -467,7 +467,7 @@ nav.menu > a:hover {
 }
 .social {
 	/* flex container */
-	width: 8rem;
+	width: 5rem;
 	font-size: 2rem;
 	justify-content: space-between;
 	margin-top: 1rem;
